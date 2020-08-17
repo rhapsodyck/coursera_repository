@@ -8,10 +8,17 @@ h1 {
   text-align: center;
   font-size: 175%;
 }
-
+#t1 {
+  background-color: coral;
+}
+#t2 {
+  background-color: yellow;
+}
+#t3 {
+  background-color: palevioletred;
+}
 .p1 {
   border: 1px solid white;
-  background-color: #93a52a;
   width: 125px;
   height: 25px;
   font-family: Cochin;
@@ -26,7 +33,7 @@ h1 {
 }
 .p2 {
   width: 90%;
-  height: 80%;
+  height: auto;
   font-family: Cambria;
   color: black;
   padding-top: 10px;
