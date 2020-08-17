@@ -17,6 +17,9 @@ h1 {
 #t3 {
   background-color: palevioletred;
 }
+#container {
+  background-color: rgb(166, 177, 150);
+}
 .p1 {
   border: 1px solid white;
   width: 125px;
@@ -56,7 +59,7 @@ h1 {
     padding-left: 10px;
     padding-right: 0px;
     padding-top: 0px;
-    background-color: rgb(166, 177, 150);
+    
     border: 3px solid white;
       }
   .col-lg-1 {
@@ -104,7 +107,6 @@ h1 {
     position: relative;
     padding-left: 10px;
     padding-right: 0px;
-    background-color: rgb(166, 177, 150);
     border: 3px solid white;
    }
   .col-md-1 {
@@ -151,7 +153,6 @@ h1 {
     position: relative;
     padding-left: 10px;
     padding-right: 0px;
-    background-color: rgb(166, 177, 150);
     border: 3px solid white;
    }
   .col-sm-1 {
