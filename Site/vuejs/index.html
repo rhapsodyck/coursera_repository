@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div class="nav-bar"></div>
+    <div id="app">
+        <div class="product">
+            <div class="product-image">
+                <img :src="image">
+            </div>
+            <div class="product-info">
+                <h1>{{ product }}</h1>
+                <p v-if="inStock && inventory > 10">In Stock</p>
+                <p v-else-if="inventory <= 10 && inventory>0">Almost sold out!!!</p>
+                <p v-else>Out Stock</p>
+                <a :href="url" target="_blank">More Products like this</a>
+                <span v-if="onSale"> On Sale!!!</span>
+                <ul>
+                    <li v-for="detail in details">{{ detail }}</li>
+                </ul>
+                <div v-for="variant in variants" 
+                     :key="variant.variantId" 
+                     class="color-box"
+                     :style="{ backgroundColor:variant.variantColor }"
+                     @mouseover="updateProduct(variant.variantImage)" >
+                    
+                </div>
+                <ul>
+                    <li v-for="size in sizes">{{ size }}</li>
+                </ul>
+                <div class="cart">
+                    <p>Cart({{cart}})</p>
+                </div>
+                <span>ADD TO CART</span>
+                <button @click="addToCart"> + </button>
+                <button @click="decrease"> - </button>
+            </div>
+            
+            
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
